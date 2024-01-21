@@ -1,0 +1,42 @@
+.header {
+    padding-left: 32px;
+    padding-right: 41px;
+    width: 100%;
+    height: 85px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: transparent;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+
+}
+
+.header-title {
+    color: #fff;
+    font-family: myfont;
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: -1.05px;
+    text-transform: uppercase;
+}
+
+.header-planets {
+    display: flex;
+    gap: 33px;
+}
+
+.planets-btn {
+    cursor: pointer;
+    border: none;
+    color: #FFF;
+    font-family: myfonts;
+    font-size: 11px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 25px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    background-color: transparent;
+}

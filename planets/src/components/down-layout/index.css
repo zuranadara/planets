@@ -1,0 +1,39 @@
+.down-layout {
+    display: flex;
+    gap: 30px;
+    margin-left: 168px;
+}
+
+.down-layout-item {
+    width: 255px;
+    height: 128px;
+    display: flex;
+    flex-direction: column;
+    padding-left: 23px;
+    padding-top: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+
+.p-title {
+    color: #FFF;
+    font-family: myfonts;
+    font-size: 11px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 25px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    opacity: 0.5;
+}
+
+.p-title-numbers {
+    color: #FFF;
+    font-family: myfont;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: -1.5px;
+    text-transform: uppercase;
+}

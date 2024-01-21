@@ -1,0 +1,103 @@
+.container {
+    width: 1440px;
+    height: 1024px;
+    margin: auto;
+    padding-top: 20px;
+}
+
+.main-layout {
+    display: flex;
+    background-color: #070724;
+    color: white;
+}
+
+.left-layout {
+    width: 925px;
+    width: 100%;
+    height: 750px;
+}
+
+.mercury {
+    margin-top: 242px;
+    margin-left: 335px;
+
+}
+
+.right-layout {
+    max-width: 515px;
+    width: 100%;
+    height: 750px;
+    color: aliceblue;
+
+}
+
+.right-layout-up{
+    display: flex;
+    flex-direction: column;
+    gap: 23px;
+}
+
+.p-planet-name {
+    width: 263px;
+    height: 104px;
+    margin-top: 128px;
+    color: #FFF;
+    font-family: myfont;
+    font-size: 80px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-transform: uppercase;
+}
+
+.description {
+    width: 350px;
+}
+
+.p-description {
+    color: #FFF;
+    font-family: myfonts;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 25px; 
+}
+
+.btn {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+}
+
+.btn-item {
+    display: flex;
+    align-items: center;
+    padding-left: 28px;
+    gap: 28px;
+    width: 350px;
+    height: 48px;  
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: #FFF;
+    font-family: myfonts;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 25px; 
+    letter-spacing: 2.571px;
+    text-transform: uppercase;
+}
+
+.btn-p {
+    color: #FFF;
+    font-family: myfonts;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 25px;
+    letter-spacing: 2.571px;
+    text-transform: uppercase;
+    opacity: 0.5;
+}
