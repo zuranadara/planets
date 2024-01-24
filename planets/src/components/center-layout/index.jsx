@@ -1,47 +1,124 @@
 import React from 'react'
-import { Header } from '../header'
-import { DownLayout } from '../down-layout'
-import { PlanetBtn, PlanetDescription, PlanetName,PlanetPhoto } from './layout-component'
-import Mercury from '../../assets/photos/mercury.svg'
+import { useState } from 'react'
+import { Navigation } from '../navigation'
+import { IconMercury, IconMercuryStructure } from '../../assets/photos/mercury'
 import './index.css'
 
-export const CenterLayout = () => {
+
+const planetContents = [
+  {
+    name: 'rotation time',
+    value: '56.6 days'
+  },
+  {
+    name: 'revolution time',
+    value: '87.97 days'
+  },
+  {
+    name: 'radius',
+    value: '2,439.7 km'
+  },
+  {
+    name: 'average temp.',
+    value: '430°c'
+  },
+        
+]
+
+const layoutProperty = [
+  { 
+    icon: <IconMercury/>,
+    title: 'Mercury',
+    name: 'overview',
+    description: `Mercury is the smallest planet in the Solar System and the closest to the Sun. 
+                 Its orbit around the Sun takes 87.97 Earth days, the shortest of all the Sun's planets.
+                 Mercury is one of four terrestrial planets in the Solar System, and is a rocky body like Earth.`
+  },  
+  { 
+    icon: <IconMercuryStructure/>,
+    title: 'Mercury',
+    name: 'Internal Structure',
+    description: `Mercury appears to have a solid silicate crust and mantle overlying a solid, 
+              iron sulfide outer core layer, a deeper liquid core layer, and a solid inner core. 
+              The planet's density is the second highest in the Solar System at 5.427 g/cm3 , 
+              only slightly less than Earth's density.`
+  },  
+  { 
+    icon: <IconMercury/>,
+    title: 'Mercury',
+    name: 'Surface Geology',
+    description: `Mercury's surface is similar in appearance to that of the Moon, 
+                  showing extensive mare-like plains and heavy cratering, indicating that it 
+                  has been geologically inactive for billions of years. It is more heterogeneous 
+                  than either Mars's or the Moon’s.`
+  },
+    
+]
+
+
+
+export const CenterLayout = ({}) => {
+  const [ActiveLayoutProperty, setActiveLayoutProperty] = useState(0)
     return (
-      <>
         <div className='container'>
-          <Header />
+          <Navigation />
           <div className='main-layout'>
           <div className='left-layout'>
-              <div><PlanetPhoto photo={<img src={Mercury}/>}/></div>
+          <div className='mercury'>
+          {layoutProperty && layoutProperty[ActiveLayoutProperty] && layoutProperty[ActiveLayoutProperty].icon}
+          </div>
           </div>
           <div className='right-layout'>
             <div className='right-layout-up'>
-                  <div><PlanetName  name={'mercury'}/></div>
-                <div>
-                  <PlanetDescription 
-                  description={`Mercury is the smallest planet in the Solar 
-                               System and the closest to the Sun. Its orbit 
-                               around the Sun takes 87.97 Earth days, the 
-                               shortest of all the Sun's planets. Mercury is one 
-                               of four terrestrial planets in the Solar System, 
-                               and is a rocky body like Earth.`}/>
-                </div>
-              <div>
-                <p>Source:<span>Wikipedia</span></p>
+            <div><p className='p-planet-name'>
+          {layoutProperty && layoutProperty[ActiveLayoutProperty] && layoutProperty[ActiveLayoutProperty].title}
+             </p></div>
+                <div><p className='p-description'>
+          {layoutProperty && layoutProperty[ActiveLayoutProperty] && layoutProperty[ActiveLayoutProperty].description}
+                   </p>
+                  </div>
+            <div>
+            <div className='wikipedia'>
+                <p>Source:</p><p>Wikipedia</p>
               </div>
             </div>
-            <div className='btn'>
-            <PlanetBtn title={'01'}
-                  description={'OVERVIEW'}/>             
-            <PlanetBtn title={'02'}
-                  description={'Internal Structure'}/>
-            <PlanetBtn title={'03'}
-                  description={'SURFACE GEOLOGY'}/>
             </div>
+            <div>
+              
+            <div className='btn'>
+
+  {Array.isArray(layoutProperty) &&
+  layoutProperty.map((Property, index) => {
+    return (
+      <button
+        onClick={() => setActiveLayoutProperty(index)}
+        key={index} 
+        className={`btn-item ${index === ActiveLayoutProperty ? 'active' : ''}`}
+      >
+        <p className="btn-p">0{index + 1} {Property.name}</p>
+      </button>
+    );
+  })}
           </div>
-      </div>
-        <DownLayout />
         </div>
-      </>
+      </div>
+    </div>
+    <div className='down-layout'>
+    {Array.isArray(planetContents) &&
+  planetContents.map((contents, index) => {
+    return (
+      <div key={index} className='down-layout-item'> 
+        <p className='p-title'>{contents.name}</p>
+        <p className='p-title-numbers'>{contents.value}</p>
+      </div>
+    );
+  })}
+         </div>
+    </div>
     )
 }
+
+export default CenterLayout
+
+
+

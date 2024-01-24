@@ -1,4 +1,4 @@
-.header {
+.navigation {
     padding-left: 32px;
     padding-right: 41px;
     width: 100%;
@@ -11,9 +11,9 @@
 
 }
 
-.header-title {
+.navigation-title {
     color: #fff;
-    font-family: myfont;
+    font-family: antonio;
     font-size: 28px;
     font-style: normal;
     font-weight: 400;
@@ -22,16 +22,16 @@
     text-transform: uppercase;
 }
 
-.header-planets {
+.navigation-planets {
     display: flex;
     gap: 33px;
 }
 
-.planets-btn {
+.planets-nav {
+    text-decoration: none;
     cursor: pointer;
-    border: none;
     color: #FFF;
-    font-family: myfonts;
+    font-family: spartan;
     font-size: 11px;
     font-style: normal;
     font-weight: 700;

@@ -17,6 +17,11 @@
     height: 750px;
 }
 
+.wikipedia {
+    display: flex;   
+    gap: 10px;
+}
+
 .mercury {
     margin-top: 242px;
     margin-left: 335px;
@@ -28,7 +33,6 @@
     width: 100%;
     height: 750px;
     color: aliceblue;
-
 }
 
 .right-layout-up{
@@ -42,7 +46,7 @@
     height: 104px;
     margin-top: 128px;
     color: #FFF;
-    font-family: myfont;
+    font-family: antonio;
     font-size: 80px;
     font-style: normal;
     font-weight: 400;
@@ -50,13 +54,11 @@
     text-transform: uppercase;
 }
 
-.description {
-    width: 350px;
-}
-
 .p-description {
+    width: 350px;
+    height: 150px;
     color: #FFF;
-    font-family: myfonts;
+    font-family: spartan;
     font-size: 14px;
     font-style: normal;
     font-weight: 400;
@@ -66,7 +68,8 @@
 .btn {
     display: flex;
     flex-direction: column;
-    margin-top: 20px;
+    padding-top: 39px;
+    gap: 16px;
 }
 
 .btn-item {
@@ -81,7 +84,7 @@
     border: none;
     border: 1px solid rgba(255, 255, 255, 0.2);
     color: #FFF;
-    font-family: myfonts;
+    font-family: spartan;
     font-size: 12px;
     font-style: normal;
     font-weight: 700;
@@ -92,7 +95,7 @@
 
 .btn-p {
     color: #FFF;
-    font-family: myfonts;
+    font-family: spartan;
     font-size: 12px;
     font-style: normal;
     font-weight: 700;
@@ -100,4 +103,47 @@
     letter-spacing: 2.571px;
     text-transform: uppercase;
     opacity: 0.5;
+}
+.down-layout-item {
+    width: 255px;
+    height: 128px;
+    display: flex;
+    flex-direction: column;
+    padding-left: 23px;
+    padding-top: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+
+.down-layout {
+    width: 1110px;
+    display: flex;
+    gap: 30px;
+    margin: auto;
+}
+
+
+
+
+.p-title {
+    color: #FFF;
+    font-family: spartan;
+    font-size: 11px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 25px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    opacity: 0.5;
+}
+
+.p-title-numbers {
+    color: #FFF;
+    font-family: antonio;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: -1.5px;
+    text-transform: uppercase;
 }
